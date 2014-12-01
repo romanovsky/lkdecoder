@@ -1,10 +1,13 @@
 module Main where
 
+{-# LANGUAGE OverlappingInstances #-}
+
 import Prelude
 import System.IO
 import Data.Time
 import Data.Attoparsec.Char8
-import qualified Text.ParserCombinators.Parsec
+import Text.ParserCombinators.ReadP (many)
+import Control.Applicative ((<*))
 import Data.Either
 import qualified Data.ByteString as BC
 --import qualified Data.ByteString.Char8 as BC
